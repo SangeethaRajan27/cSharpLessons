@@ -1,0 +1,11 @@
+﻿@model NWindBackward.Models.OrderIdsViewModel
+
+<div>
+	<h4>OrderIds</h4>
+	<hr />
+	<form asp-asp-controller="Order" method="post" asp-action="Details">
+		<select asp-for="Id" asp-items="Model.OrderIdSelectedList">
+		</select>
+		<button type="submit">Details</button>
+	</form>
+</div>

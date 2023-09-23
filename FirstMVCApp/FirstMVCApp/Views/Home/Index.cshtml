@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to MVC</h1>
+</div>
+<form action="Home/DoLogin">
+    <div>
+        <div>
+            <label for="txtUser">User Name:</label>
+            <input type="text" name="txtUser" id="txtUser" required placeholder="Enter UserID" />
+        </div>
+        <div>
+            <label for="txtpwd">Password:</label>
+            <input type="password" name="txtpwd" id="txtpwd" required placeholder="Enter Password" />
+        </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="Home/SayHello?name="Sangeetha">SayHello</a>
+</div>
+<div>
+    <a href="Home/Add?x=123&y=1">Add</a>
+</div>
+<div>
+    <a href="Home/Multiply?x=123&y=1">Product</a>
+</div>
+<div>
+    <a href="Home/Divide?x=123&y=1">Divide</a>
+</div
+<div>
+    <a href="Home/AddNewBook">New Book</a>
+</div>
+<div>
+    <a href="Home/ListAllBook">All Books</a>
+</div>
+<div>
+    <a href="Author/AddNewAuthor">New Author</a>
+</div>
+<div>
+    <a href="Author/ListAllAuthor">All Author</a>
+</div>
+<div>
+    <a href="AuthorController1">AuthorLanding page</a>
+</div>
+<div>
+    <a href="AuthorController1/Create">Create Author</a>
+</div>
+<div>
+    <a href="AuthorController1/Details">Search Author</a>
+</div>
+<div>
+    <a href="AuthorController1/Index">Index page</a>
+</div>
+<div>
+    <a href="Emp/Index">List of Emp table from Db</a>
+</div>
+<div>
+    <a href="Movie/Index">List of Movies</a>
+</div>

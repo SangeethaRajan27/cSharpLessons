@@ -1,0 +1,20 @@
+﻿@model IEnumerable<NWindBackward.Models.Order>
+@{
+    ViewData["Title"] = "Index";
+    var SelectedOrderId = 1;
+}
+<h1>Order</h1>
+
+@using (Html.BeginForm("Details", "Order", FormMethod.Get))
+{
+    <div>
+        <label for="orderid">Order ID</label>
+        <select id="orderid" name="id" size="1">
+            @foreach (var oid in Model)
+            {
+                <option value="@oid.OrderId">@oid.OrderId</option>
+            }
+        </select>
+        <button type="submit">Submit</button>
+    </div>
+}

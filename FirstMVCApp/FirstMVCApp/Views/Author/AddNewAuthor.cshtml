@@ -1,0 +1,50 @@
+﻿@model FirstMVCApp.Models.Author
+
+@{
+    ViewData["Title"] = "AddNewAuthor";
+}
+
+<h1>AddNewAuthor</h1>
+
+<h4>Author</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveNewAuthor">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AuthorID" class="control-label"></label>
+                <input asp-for="AuthorID" class="form-control" />
+                <span asp-validation-for="AuthorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorName" class="control-label"></label>
+                <input asp-for="AuthorName" class="form-control" />
+                <span asp-validation-for="AuthorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuthorDateofBirth" class="control-label"></label>
+                <input asp-for="AuthorDateofBirth" class="form-control" />
+                <span asp-validation-for="AuthorDateofBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoofBooksPublished" class="control-label"></label>
+                <input asp-for="NoofBooksPublished" class="form-control" />
+                <span asp-validation-for="NoofBooksPublished" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Royaltycompany" class="control-label"></label>
+                <input asp-for="Royaltycompany" class="form-control" />
+                <span asp-validation-for="Royaltycompany" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

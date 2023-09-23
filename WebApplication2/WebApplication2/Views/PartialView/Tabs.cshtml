@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Tabs";
+}
+<h1>Partial Views</h1>
+<div>
+    <!--Tab Buttons -->
+    <ul id="tabstrip" class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#_FirstTab" role="tab" data-toggle="tab">Submission</a>
+        </li>
+        <li>
+            <a href="#_SecondTab" role="tab" data-toggle="tab">Search</a>
+        </li>
+        <li>
+            <a href="#_ThirdTab" role="tab" data-toggle="tab">Comments</a>
+        </li>
+    </ul>
+</div>
+@*# is selector by using its ID---id selector *@ 
+@*locating DOM elements using selectors*@
+@*"partial"---directly access cshtml
+action poiints to -view
+not directly from browser like home/index/
+partial allows to access inside another view
+*@
+<!--- Tab Content Containers --->
+<div class="tab-content">
+    <div class="tab-pane fade initialism active" id="_FirstTab">
+        <partial name="Score"/>
+    </div>
+    <div class="tab-pane fade initialism active" id="_SecondTab">
+        <partial name="ChildList" />
+    </div>
+    <div class="tab-pane fade initialism active" id="_ThirdTab">
+        <partial name="ChildViewdata" view-data="ViewData" />
+    </div>
+
+</div>
+</hr>
+<partial name="Score" />
+<partial name="ChildList" />
+<partial name="ChildViewdata" view-data="ViewData" />

@@ -1,0 +1,23 @@
+﻿@using WebApplication2.Models;
+
+@{
+    ViewData["Title"] = "GetBook";
+}
+
+<h1>GetBook</h1>
+<div>
+@{
+    Book b1 = (Book)ViewData["book"];
+    }
+
+@if (b1 != null)
+{
+    @b1.AuthorName
+}
+else
+{
+    <strong> Book is null</strong>
+}
+
+</div>
+

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var parms = new Dictionary<string, string>
+    {
+    {"x","11"}
+    };
+    TempData["globalX"] = 100; //global variable
+    ViewData["globaly"] = 100; //local limited to view
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+<div>
+    <div class="="col-md-4>
+        <form method="post" asp-all-route-data="parms">
+            @*taghelper*@
+            <div>
+                @Html.Label("name")
+                @Html.TextBox("name","Enter Name")
+            </div>
+            <div>
+                @Html.Label("password")
+                <input type="text" name="password" placeholder="Enter Password"/>
+            </div>
+            <input type="submit" name="btnsubmit" value="Hit me" />
+        </form>
+
+    </div>
+</div>
